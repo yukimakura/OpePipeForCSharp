@@ -1,0 +1,22 @@
+name: buildAndRelease
+
+on:
+  pull_request:
+    branches:
+      - master
+    types: [closed]
+
+jobs:
+  if_merged:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+    - name: Build
+      run: dotnet build OpePipeForCSharp.sln
+    - name: Publish to NuGet
+      run: |
+      cd OpePipeForCSharp/bin/Release
+      dotnet nuget push *.nupkg --api-key ${{secrets.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json
