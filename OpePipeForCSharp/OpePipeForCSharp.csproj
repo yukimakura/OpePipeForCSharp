@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<Version>1.0.0</Version>
+		<Authors>yukimakura</Authors>
+		<Description>関数型言語のパイプ演算子のような機能を拡張メソッドにて提供する</Description>
+
+		<GeneratePackageOnBuild Condition=" '$(Configuration)' == 'Release' "> true</GeneratePackageOnBuild>
+		<IsPackable>true</IsPackable>
+	</PropertyGroup>
+
+</Project>
