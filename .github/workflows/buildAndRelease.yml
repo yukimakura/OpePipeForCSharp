@@ -15,7 +15,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
     - name: Build
-      run: dotnet build OpePipeForCSharp.sln
+      run: dotnet build OpePipeForCSharp.sln --configuration Release
     - name: Publish to NuGet
       run: |
         cd OpePipeForCSharp/bin/Release

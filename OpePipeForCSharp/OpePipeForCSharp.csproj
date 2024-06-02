@@ -6,8 +6,7 @@
 		<Authors>yukimakura</Authors>
 		<Description>関数型言語のパイプ演算子のような機能を拡張メソッドにて提供する</Description>
 
-		<GeneratePackageOnBuild Condition=" '$(Configuration)' == 'Release' "> true</GeneratePackageOnBuild>
-		<IsPackable>true</IsPackable>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 
 </Project>
